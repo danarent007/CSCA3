@@ -42,6 +42,12 @@ public class HashFunctions {
         
     }
     
+    public int OwnHash(String key){
+        return key.hashCode();
+    }
+
+    
+    
     
     
     

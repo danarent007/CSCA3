@@ -34,6 +34,27 @@ public class HashApp {
             PrintWriter H2 = new PrintWriter(new FileWriter("Hash2.txt"));
             PrintWriter OwnHash = new PrintWriter(new FileWriter("OwnHash.txt"));
             
+            String tmp = br.readLine();
+            
+            HashFunctions h = new HashFunctions();
+            
+            while (tmp != null)
+            {
+                String tmp1 = new Entry(tmp).getName();
+                WorstCase.println(h.WorstCase(tmp1));
+                H1.println(h.H1(tmp1));
+                H2.println(h.H2(tmp1));
+                OwnHash.println(h.OwnHash(tmp1));
+                
+                tmp = br.readLine();
+            }
+            
+            WorstCase.close();
+            H1.close();
+            H2.close();
+            OwnHash.close();
+            
+            
             
           
         
