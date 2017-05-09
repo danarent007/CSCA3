@@ -19,14 +19,12 @@ import java.io.PrintWriter;
 public class HashApp {
     
     public static void main(String[] args) throws FileNotFoundException, IOException {
-        if(args.length < 1){
-            args[0] = "1";
-        }
+        
         
         //for (int i = 0; i < Integer.parseInt(args[0]); i++)
         
             
-            QueryFileGenerator.main(args); //Generate query file (default len = 1)
+           
             BufferedReader br = new BufferedReader(new FileReader("querydata"));
             
             PrintWriter WorstCase = new PrintWriter(new FileWriter("WorstCase.txt"));
