@@ -25,7 +25,7 @@ public class HashApp {
         
             
            
-            BufferedReader br = new BufferedReader(new FileReader("querydatafull"));
+            BufferedReader br = new BufferedReader(new FileReader("querydata"));
             
             PrintWriter WorstCase = new PrintWriter(new FileWriter("WorstCase.txt"));
             PrintWriter H1 = new PrintWriter(new FileWriter("Hash1.txt"));
@@ -38,11 +38,11 @@ public class HashApp {
             
             while (tmp != null)
             {
-                String tmp1 = new Entry(tmp).getName();
-                WorstCase.println(h.WorstCase(tmp1));
-                H1.println(h.H1(tmp1));
-                H2.println(h.H2(tmp1));
-                OwnHash.println(h.OwnHash(tmp1));
+                
+                WorstCase.println(h.WorstCase(tmp));
+                H1.println(h.H1(tmp));
+                H2.println(h.H2(tmp));
+                OwnHash.println(h.OwnHash(tmp));
                 
                 tmp = br.readLine();
             }

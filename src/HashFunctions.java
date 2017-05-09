@@ -31,18 +31,18 @@ public class HashFunctions {
     }
     
     
-    public int H2(String key){
+    public int OwnHash(String key){
         int hash = 0;
         for (int i = 0; i < key.length(); i++) 
         {
-            //hash = (int) (hash + (Math.pow(2, i-1)))(key.charAt(i));
+            hash = ((789*hash) + key.charAt(i)) % tableSize;
         }
         hash = hash % tableSize;
         return hash;  
         
     }
     
-    public int OwnHash(String key){
+    public int H2(String key){
         return key.hashCode();
     }
 
