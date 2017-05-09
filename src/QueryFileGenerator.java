@@ -37,7 +37,7 @@ public class QueryFileGenerator
         BufferedReader br = new BufferedReader(new FileReader("testdata"));
         
         PrintWriter pw = new PrintWriter(new FileWriter("querydata"));
-        //PrintWriter pa = new PrintWriter(new FileWriter("querydatafull"));
+        PrintWriter pa = new PrintWriter(new FileWriter("querydatafull"));
         
         String tmp = br.readLine();
         while(tmp != null)
@@ -51,7 +51,7 @@ public class QueryFileGenerator
             
             int ind = ThreadLocalRandom.current().nextInt(0, l.size());
             String data = l.get(ind);
-            //pa.println(data);
+            pa.println(data);
       
             String[] data1 = data.split("\\|");
             pw.println(data1[2]);
