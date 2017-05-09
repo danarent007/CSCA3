@@ -25,7 +25,7 @@ public class HashApp {
         
             
            
-            BufferedReader br = new BufferedReader(new FileReader("querydata"));
+            BufferedReader br = new BufferedReader(new FileReader("querydatafull"));
             
             PrintWriter WorstCase = new PrintWriter(new FileWriter("WorstCase.txt"));
             PrintWriter H1 = new PrintWriter(new FileWriter("Hash1.txt"));
