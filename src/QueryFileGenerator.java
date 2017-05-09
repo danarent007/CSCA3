@@ -28,12 +28,10 @@ public class QueryFileGenerator
     public static void main(String[] args) throws FileNotFoundException, IOException
     {
         
-        if(args.length < 1){
-            System.out.println("Please add arguments: number of file entries.");
         
-            System.exit(0);
-        }
         
+        System.out.println("Enter file length:");
+        int len = s.nextInt();
         ArrayList<String> l = new ArrayList<String>();
         
         BufferedReader br = new BufferedReader(new FileReader("testdata"));
@@ -48,7 +46,7 @@ public class QueryFileGenerator
             tmp = br.readLine();
         }
         
-        for (int i = 0; i < Integer.parseInt(args[0]); i++)
+        for (int i = 0; i < len; i++)
         {
             
             int ind = ThreadLocalRandom.current().nextInt(0, l.size());
